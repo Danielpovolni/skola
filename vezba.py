@@ -53,3 +53,56 @@ for i in range(6):
     obim = obim + unos
 print(obim)
 '''
+
+
+
+#sortiranje 
+ucenici = [
+    {'Ime': 'Marko', 'razred': 7, 'ocena': 4.75},
+      {'Ime': 'Jovan', 'razred': 8, 'ocena': 2.75},
+      {'Ime': 'Petar', 'razred': 7, 'ocena': 3.75},
+      {'Ime': 'Dragan', 'razred': 6, 'ocena': 5.00},
+    ]
+
+
+ucenici.sort(key=lambda x: x.get('Ime'))
+print(ucenici)
+
+ucenici.sort(key=lambda x: x.get('razred'))
+print(ucenici)
+
+
+#preslikavanje
+
+def obim(a,b,c,d,e,f):
+    return a*b*c*d*e*f
+uglovi= {
+    (1,2,3,4,5,6),
+    (1,3,2,4,3,5),
+    (7,6,4,3,2,4),
+    (9,8,7,6,5,4),
+}
+
+for ugao in uglovi:
+    print(obim(*ugao))
+'''
+'''
+for i in range(3):
+    visina = int(input("kolika je visina" ))
+    if visina >= 160:
+        print(visina, "Nedozvoljen pristup")
+    else:
+        print(visina,"Dozvoljen pristup")
+
+
+dozvoljena_visina=[]
+n= int(int(input("unesi broj zainteresovanih: ")))
+for i in range(n):
+    visina= int(input("kolika je tvoja visina: "))
+    if visina >160:
+        print("nedozvoljena visina" )    
+    if visina <160:
+        visina = dozvoljena_visina.append(visina)
+        print("dozvoljeana visina")
+
+'''
